@@ -1,0 +1,84 @@
+@import '~@angular/material/theming';
+
+$primary: mat-palette($mat-blue,500); /* REMOVE ME AND USE THEMING FILE */ 
+$accent: mat-palette($mat-teal);
+
+.example-card {
+    margin: 20px;
+}
+
+
+::ng-deep ng-select.prm-select > div {
+    border: none;
+    border-bottom: 1px solid map_get($mat-grey, 600);
+    position: relative;
+    outline: 0;
+}
+
+::ng-deep ng-select.prm-select label {
+    font-size: 11px;
+    color: map_get($mat-grey, 600);
+}
+
+::ng-deep ng-select.prm-select:focus label {
+    color: #3f51b5;
+}
+
+::ng-deep ng-select.prm-select > div > div.multiple {
+    padding: 0 10px 0 0;
+    outline: 0;
+}
+
+::ng-deep ng-select.prm-select > div > div.multiple:focus {
+    outline: 0;
+}
+
+::ng-deep ng-select.prm-select > div:after {
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid;
+    margin: 0 4px;
+    color: map_get($mat-grey, 600)
+}
+
+
+::ng-deep ng-select.prm-select select-dropdown > div .options {
+    @include mat-elevation(6);
+}
+
+::ng-deep ng-select.prm-select select-dropdown > div {
+    border: none;
+}
+
+::ng-deep ng-select.prm-select select-dropdown .highlighted {
+    background-color: map_get($mat-grey, 100);
+    color: inherit;
+}
+
+::ng-deep ng-select.prm-select select-dropdown .selected {
+    background-color: #e0e0e0;
+    color: #3f51b5;
+}
+
+::ng-deep ng-select.prm-select select-dropdown .selected.highlighted {
+    background-color: #e0e0e0;
+}
+
+::ng-deep ng-select.prm-select select-dropdown > div .options ul li {
+    padding: 8px;
+}
+
+::ng-deep ng-select.prm-select > div > div.multiple > div.option {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    border-radius: 24px;
+    border: none;
+    background-color: map_get($mat-grey, 200);
+    padding: 2px 12px;
+    line-height: 18px;
+}
